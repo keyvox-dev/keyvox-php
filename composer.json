@@ -6,6 +6,7 @@
         "blogging",
         "api"
     ],
+    "homepage": "https://keyvox.dev",
     "autoload": {
         "psr-4": {
             "KeyVox\\": "src/"
@@ -24,5 +25,16 @@
             "email": "157120239+keyvox-dev@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "pestphp/pest": "^2.33",
+        "symfony/var-dumper": "^7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }
