@@ -1,0 +1,28 @@
+{
+    "name": "keyvox/keyvox-php",
+    "description": "KeyVox PHP library",
+    "keywords": [
+        "keyvox",
+        "blogging",
+        "api"
+    ],
+    "autoload": {
+        "psr-4": {
+            "KeyVox\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KeyVox\\": [
+                "tests/"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "keyvox-dev",
+            "email": "157120239+keyvox-dev@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
