@@ -4,7 +4,6 @@ namespace KeyVox;
 
 use AllowDynamicProperties;
 use GuzzleHttp\Exception\GuzzleException;
-use KeyVox\Article;
 use GuzzleHttp\Client as GuzzleClient;
 
 #[AllowDynamicProperties] class KeyVox {
@@ -21,6 +20,7 @@ use GuzzleHttp\Client as GuzzleClient;
         $this->associative = $options['associative'] ?? true;
 
         $this->articles = new Article($this->baseURL, [$this, 'fetchData']);
+        $this->tags = new Tag($this->baseURL, [$this, 'fetchData']);
     }
 
     public function getApiKey(): string

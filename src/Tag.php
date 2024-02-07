@@ -2,7 +2,7 @@
 
 namespace KeyVox;
 
-class Article implements FetchDataInterface {
+class Tag implements FetchDataInterface {
 
     private string $baseURL;
 
@@ -16,13 +16,13 @@ class Article implements FetchDataInterface {
 
     public function list($options = [])
     {
-        $url = "{$this->baseURL}/articles";
+        $url = "{$this->baseURL}/tags";
         return call_user_func($this->fetchDataMethod, $url, $options);
     }
 
     public function retrieve($id_or_slug, $options = [])
     {
-        $url = "{$this->baseURL}/articles/{$id_or_slug}";
+        $url = "{$this->baseURL}/tags/{$id_or_slug}";
         return call_user_func($this->fetchDataMethod, $url, $options);
     }
 }
