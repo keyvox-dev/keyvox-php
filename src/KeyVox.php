@@ -21,6 +21,7 @@ use GuzzleHttp\Client as GuzzleClient;
 
         $this->articles = new Article($this->baseURL, [$this, 'fetchData']);
         $this->tags = new Tag($this->baseURL, [$this, 'fetchData']);
+        $this->authors = new Author($this->baseURL, [$this, 'fetchData']);
     }
 
     public function getApiKey(): string

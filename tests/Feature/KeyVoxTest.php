@@ -50,3 +50,20 @@ test('tags.retrieve.slug', function () use ($kv) {
     $tag = $kv->tags->retrieve($slug);
     expect($tag)->toHaveKey('data');
 });
+
+test('authors.list', function () use ($kv) {
+    $authors = $kv->authors->list();
+    expect($authors)->toHaveKey('data');
+});
+
+test('authors.retrieve.id', function () use ($kv) {
+    $id = $_ENV['AUTHOR_ID'];
+    $author = $kv->authors->retrieve($id);
+    expect($author)->toHaveKey('data');
+});
+
+test('authors.retrieve.slug', function () use ($kv) {
+    $slug = $_ENV['AUTHOR_SLUG'];
+    $author = $kv->authors->retrieve($slug);
+    expect($author)->toHaveKey('data');
+});
